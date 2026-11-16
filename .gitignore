@@ -1,0 +1,21 @@
+# Checkpoints & Large weights
+*.pth
+*.pt
+checkpoints/
+sam_vit_b_01ec64.pth
+
+# Raw Datasets & Masks
+images/
+fracture_masks/
+Processed_MultiClass/
+Annotations/
+
+
+# PDFs & Archives
+*.pdf
+*.zip
+
+# Python caches
+__pycache__/
+*.pyc
+.ipynb_checkpoints/

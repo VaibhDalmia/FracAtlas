@@ -1,0 +1,56 @@
+Image Segmentation (Medical X-ray Image Segmentation)
+Image segmentation is a fundamental computer vision technique that partitions an image into meaningful
+regions by assigning a class label to each pixel or group of pixels, enabling precise localization and
+delineation of objects or structures of interest. Conventional segmentation is broadly categorized into
+semantic segmentation (assigning a class label to every pixel without distinguishing object instances),
+instance segmentation (separating individual object instances of the same class), and panoptic segmen-
+tation (jointly performing semantic and instance segmentation). In medical imaging, segmentation of
+X-ray images is essential for identifying anatomical structures such as bones, localizing fracture regions,
+and separating them from the background and other tissues, thereby supporting computer-aided diagno-
+sis, treatment planning, and clinical decision-making. Conventional segmentation approaches include
+classical techniques (thresholding, edge detection, region growing, watershed, and active contours),
+convolutional encoder–decoder architectures (FCN, U-Net, U-Net++, Attention U-Net, DeepLabV3+),
+self-configuring frameworks (nnU-Net), transformer-based models (TransUNet, Swin-UNet, UNETR,
+SegFormer, Mask2Former), state-space (Mamba-based) models (U-Mamba, VM-UNet, Swin-UMamba),
+diffusion-based segmentation models (MedSegDiff), and promptable foundation models (Segment Any-
+thing Model (SAM), SAM 2, MedSAM). However, existing methods face several challenges, including
+low contrast and overlapping anatomical structures in X-ray images, thin and irregular fracture lines,
+severe class imbalance between background, bone, and fracture pixels, limited availability of annotated
+medical data, imprecise boundary delineation, poor generalization across scanners and patient popula-
+tions, high computational cost of large foundation and transformer models, and the domain gap between
+natural-image and medical-image pre-training.
+In this research, the different types of image segmentation will first be studied, and the latest image
+segmentation models and techniques will be surveyed and compared through a structured literature review.
+Based on their architectural characteristics, accuracy, boundary-preservation capability, data efficiency,
+and computational requirements, the models most suitable for segmenting X-ray images into bone, fracture
+region, background, and any additional relevant classes (e.g., soft tissue or implants) will be identified
+and justified. The working principle of the selected baseline models will then be demonstrated using
+publicly available X-ray datasets (e.g., FracAtlas, GRAZPEDWRI-DX, publicly available bone fracture
+X-ray segmentation datasets, or equivalent open-access collections) after appropriate preprocessing,
+including contrast enhancement (e.g., CLAHE), resizing, intensity normalization, and data augmentation.
+Subsequently, potential improvements will be investigated through hybrid CNN–Transformer or CNN–
+Mamba architectures, attention and multi-scale feature fusion, boundary-aware and topology-aware
+refinement, adaptive and class-imbalance-aware loss functions (e.g., Dice, Focal, Tversky, and boundary
+losses), parameter-efficient fine-tuning of foundation models (e.g., adapter- or LoRA-based MedSAM),
+prompt-guided segmentation, and uncertainty-aware prediction. The proposed modifications should be
+supported by mathematical formulations, theoretical analysis or derivations wherever applicable, ablation
+studies, and experimental validation. The effectiveness of the proposed model will be evaluated against
+conventional baseline models (e.g., U-Net, U-Net++, DeepLabV3+, TransUNet, and nnU-Net) in terms
+of Dice Similarity Coefficient (DSC), Intersection over Union (IoU), precision, recall, pixel accuracy,
+Hausdorff distance, class-wise performance (especially for the fracture class), model size, parameter
+count, FLOPs, inference latency, robustness, and generalization.
+Problem Statement:1
+To investigate the types, working principles, and limitations of conventional and state-of-the-art image
+segmentation models, identify the models most suitable for multi-class segmentation of X-ray images
+(bone, fracture region, background, and other relevant classes), and develop an enhanced segmentation
+framework through novel mathematical or algorithmic modifications using publicly available X-ray
+1
+image datasets. The proposed approach should address challenges related to low image contrast, thin and
+irregular fracture boundaries, severe class imbalance, limited annotated data, boundary inaccuracies, and
+computational complexity. The proposed improvements should be supported by mathematical models,
+theoretical proofs, or experimental implementations and validated through comparative analysis and
+ablation studies against existing segmentation models. The effectiveness of the proposed framework
+should be demonstrated in terms of segmentation accuracy (Dice coefficient, IoU, precision, recall,
+pixel accuracy, and Hausdorff distance), class-wise (particularly fracture) performance, model complex-
+ity, inference speed, robustness, and generalization, with particular emphasis on developing accurate,
+boundary-preserving, and computationally efficient models suitable for computer-aided fracture diagnosis.

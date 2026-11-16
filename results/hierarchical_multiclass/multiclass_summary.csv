@@ -1,0 +1,4 @@
+image_id,orig_size,bone_coverage_pct,raw_fracture_pixels,filtered_fracture_pixels,false_positives_filtered,total_time_sec
+IMG0003297.jpg,373x454,8.41,152,138,14,1.026
+IMG0003298.jpg,373x454,8.98,668,463,205,0.093
+IMG0003301.jpg,373x454,8.74,0,0,0,0.099
